@@ -481,6 +481,7 @@
       types: {}
     damageRecovery:
       types: {}
+  - type: Tower7GTarget # Exodus-Adminbus
 
 # NonHuman NPC base, no equipment, immune to vacuum/low pressure
 - type: entity
@@ -553,6 +554,7 @@
     - DoorBumpOpener
     - CannotSuicide
   - type: FTLKnockdownImmune
+  - type: Tower7GTarget # Exodus-Adminbus
 
 # A simpler base for extending existing mobs (e.g. carp, kangaroos, snakes, xenos)
 - type: entity
@@ -589,11 +591,11 @@
   - type: ZombieImmune
   - type: NameIdentifier
     group: GenericNumber
-  - type: NpcFactionMember
-    factions:
-    - SimpleHostile
+  - type: Puller
+  - type: Hands
   - type: Carriable # Kept for consistency with other mobs
   - type: FTLKnockdownImmune
+  - type: Tower7GTarget # Exodus-Adminbus
 #endregion
 
 #region Roadkill
