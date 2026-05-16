@@ -14,7 +14,7 @@ This means they remain at liberty to contribute their work anywhere they please.
 
 ## Code license
 
-The project as a whole is licensed under the terms of the [AGPLv3](https://github.com/new-frontiers-14/frontier-station-14/blob/master/LICENSE-AGPLv3.txt) and must be followed regardless of parent licenses.
+The project as a whole is licensed under the terms of the [AGPLv3](Licenses/LICENSE-AGPLv3.txt) and must be followed regardless of parent licenses.
 
 Where code from other authors is used, you must follow the terms of both the AGPLv3 and their license as given in the Attributions table below. Copyright information for all AGPLv3-licensed code is listed in [COPYRIGHT-AGPLv3.txt](https://github.com/new-frontiers-14/frontier-station-14/blob/master/COPYRIGHT-AGPLv3.txt).
 
