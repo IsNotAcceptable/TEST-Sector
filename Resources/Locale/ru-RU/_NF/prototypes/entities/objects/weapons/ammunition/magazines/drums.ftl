@@ -1,0 +1,5 @@
+ent-NFMagazineShotgunDrum = барабан (4 gauge)
+ent-NFMagazineShotgunDrumEmpty = барабан (4 gauge, любые)
+ent-NFMagazineShotgunDrumBeanbag = барабан (4 gauge, траматическая)
+ent-NFMagazineShotgunDrumSlug = барабан (4 gauge пуля)
+ent-NFMagazineShotgunDrumIncendiary = барабан (4 gauge, зажигательная дробь)

@@ -1,0 +1,10 @@
+ent-ClothingUnderwearSocksBase = based socks
+    .desc = Ты не должен их видеть.
+ent-ClothingUnderwearSocksHigh = высокие носки
+    .desc = Высокие носки Nanotrasen для персонала станции. Покрашены в белый.
+ent-ClothingUnderwearSocksNormal = носки
+    .desc = Стандартные носки Nanotrasen для персонала станции. Покрашены в белый.
+ent-ClothingUnderwearSocksShort = короткие носки
+    .desc = Короткие носки Nanotrasen для персонала станции. Покрашены в белый.
+ent-ClothingUnderwearSocksThigh = чулки
+    .desc = Стандартные чулки Nanotrasen для персонала станции. Покрашены в белый.

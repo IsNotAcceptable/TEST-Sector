@@ -1,0 +1,19 @@
+
+materials-FoodAmbrosiaVulgaris = амброзия вульгарис
+materials-FoodAmbrosiaDeus = амброзия деус
+materials-NecroGland = железа заразителя
+materials-FoodAloe = алоэ
+materials-DeathNettle = смертокрапива
+materials-FoodFlyAmanita = мухомор
+materials-FoodGalaxythistle = галакточертополох
+materials-FoodGatfruit = гатфрукт
+materials-FoodLingzhi = линчжи
+materials-Nettle = крапива
+materials-FoodGoldenApple = золотое яблоко
+materials-FoodChiliPepper = перец чили
+materials-FoodChillyPepper = перец чилли
+materials-FoodGarlic = чеснок
+materials-FoodPoppy = мак
+materials-FoodLily = лилия
+materials-FoodSpacemansTrumpet = космонавтская труба
+materials-FoodBloodTomato = кровяной помидор

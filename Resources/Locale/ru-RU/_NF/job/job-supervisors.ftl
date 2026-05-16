@@ -1,0 +1,9 @@
+job-supervisors-sr = Директору Исследований
+job-supervisors-sheriff = Полковнику
+job-supervisors-bailiff = помощнику Полковника
+job-supervisors-sergeant = лейтенанту
+job-supervisors-cadet = всему вышестоящему персоналу СРБС
+job-supervisors-prisoner = всему персоналу СРБС
+job-supervisors-nfsd = Полковнику, помощнику Полковника  и лейтенантам
+job-supervisors-pirate = боцману и капитану
+job-supervisors-nobody = никому
