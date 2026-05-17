@@ -28,7 +28,6 @@ public sealed partial class CargoSystem
 {
     [Dependency] private readonly ContainerSystem _container = default!;
     [Dependency] private readonly NameIdentifierSystem _nameIdentifier = default!;
-    [Dependency] private readonly EntityWhitelistSystem _whitelistSys = default!;
 
     private static readonly ProtoId<NameIdentifierGroupPrototype> BountyNameIdentifierGroup = "Bounty";
 
@@ -320,10 +319,10 @@ public sealed partial class CargoSystem
     /// <returns>true if <paramref name="entity"/> is a valid item for the bounty entry, otherwise false</returns>
     public bool IsValidBountyEntry(EntityUid entity, CargoBountyItemEntry entry)
     {
-        if (!_whitelistSys.IsValid(entry.Whitelist, entity))
+        if (!_whitelist.IsValid(entry.Whitelist, entity))
             return false;
 
-        if (entry.Blacklist != null && _whitelistSys.IsValid(entry.Blacklist, entity))
+        if (entry.Blacklist != null && _whitelist.IsValid(entry.Blacklist, entity))
             return false;
 
         return true;

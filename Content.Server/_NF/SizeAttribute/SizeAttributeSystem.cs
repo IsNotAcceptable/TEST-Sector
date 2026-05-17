@@ -6,6 +6,7 @@ using Robust.Shared.Physics.Systems;
 using Content.Shared.Sprite;
 using Content.Shared._NF.SizeAttribute;
 using Content.Shared.Nyanotrasen.Item.PseudoItem;
+using Content.Shared.Sprite;
 
 namespace Content.Server.SizeAttribute
 {

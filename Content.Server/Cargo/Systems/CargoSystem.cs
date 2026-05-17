@@ -20,6 +20,8 @@ using Robust.Shared.Audio.Systems;
 using Robust.Shared.Configuration;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
+using Content.Shared.Whitelist;
+using Content.Server._NF.Bank; // Frontier
 
 namespace Content.Server.Cargo.Systems;
 
@@ -43,6 +45,8 @@ public sealed partial class CargoSystem : SharedCargoSystem
     [Dependency] private readonly UserInterfaceSystem _uiSystem = default!;
     [Dependency] private readonly MetaDataSystem _metaSystem = default!;
     [Dependency] private readonly RadioSystem _radio = default!;
+    [Dependency] private readonly EntityWhitelistSystem _whitelist = default!; // Frontier
+    [Dependency] private readonly BankSystem _bank = default!;
 
     private EntityQuery<TransformComponent> _xformQuery;
     private EntityQuery<CargoSellBlacklistComponent> _blacklistQuery;
