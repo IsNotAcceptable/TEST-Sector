@@ -8,9 +8,19 @@ jobs:
   add_label:
     runs-on: ubuntu-latest
     steps:
+    - name: Generate GitHub App Token
+      id: app-token
+      uses: actions/create-github-app-token@v1
+      with:
+        app-id: ${{ secrets.APP_ID }}
+        private-key: ${{ secrets.APP_PRIVATE_KEY }}
+        
     - uses: actions-ecosystem/action-add-labels@v1
       with:
         labels: "S: Needs Review"
+        github_token: ${{ steps.app-token.outputs.token }}
+        
     - uses: actions-ecosystem/action-remove-labels@v1
       with:
         labels: "S: Awaiting Changes"
+        github_token: ${{ steps.app-token.outputs.token }}
