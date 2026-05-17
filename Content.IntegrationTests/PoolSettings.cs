@@ -46,6 +46,11 @@ public sealed class PoolSettings : PairSettings
     /// </summary>
     public string Map { get; init; } = PoolManager.TestMap;
 
+    /// <summary>
+    /// Mono - skips pair validation if set. Also stops termination on error.
+    /// </summary>
+    public bool NoValidate = false;
+
     public override bool CanFastRecycle(PairSettings nextSettings)
     {
         if (!base.CanFastRecycle(nextSettings))

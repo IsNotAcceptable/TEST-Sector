@@ -45,31 +45,31 @@ public sealed class LayerGroup
     public GroupSource Source { get; set; } = new();
     public List<Layer> Layers { get; set; } = new();
 
-    public static LayerGroup DefaultParallax(IResourceManager resourceManager, ParallaxOutput output)
+    public static LayerGroup DefaultParallax()
     {
         return new LayerGroup
         {
             Scale = new Position(0.1f, 0.1f),
             Source = new GroupSource
             {
-                Url = output.ReferenceResourceFile(resourceManager, new ResPath("/Textures/Parallaxes/layer1.png")),
-                Extent = new Extent(6000, 4000),
+                Url = "https://i.imgur.com/3YO8KRd.png",
+                Extent = new Extent(6000, 4000)
             },
             Layers = new List<Layer>
             {
                 new()
                 {
-                    Url = output.ReferenceResourceFile(resourceManager, new ResPath("/Textures/Parallaxes/layer1.png")),
+                    Url = "https://i.imgur.com/IannmmK.png"
                 },
                 new()
                 {
-                    Url = output.ReferenceResourceFile(resourceManager, new ResPath("/Textures/Parallaxes/layer2.png")),
+                    Url = "https://i.imgur.com/T3W6JsE.png",
                     Composition = "lighter",
                     ParallaxScale = new Position(0.2f, 0.2f)
                 },
                 new()
                 {
-                    Url = output.ReferenceResourceFile(resourceManager, new ResPath("/Textures/Parallaxes/layer3.png")),
+                    Url = "https://i.imgur.com/T3W6JsE.png",
                     Composition = "lighter",
                     ParallaxScale = new Position(0.3f, 0.3f)
                 }
