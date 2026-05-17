@@ -457,11 +457,9 @@ namespace Content.IntegrationTests.Tests
 
         private EntityUid SpawnEntity(
             IEntityManager entManager,
-            string? protoName,
             string protoName,
             MapCoordinates coordinates,
-            ComponentRegistry? registry = null)
-        ComponentRegistry registry = null)
+            ComponentRegistry registry = null)
         {
             try
             {
@@ -478,11 +476,9 @@ namespace Content.IntegrationTests.Tests
 
         private EntityUid SpawnEntity(
             IEntityManager entManager,
-            string? protoName,
             string protoName,
             EntityCoordinates coordinates,
-            ComponentRegistry? registry = null)
-        ComponentRegistry registry = null)
+            ComponentRegistry registry = null)
         {
             try
             {
