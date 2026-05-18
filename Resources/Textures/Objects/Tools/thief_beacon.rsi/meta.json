@@ -1,7 +1,7 @@
 {
     "version": 1,
     "license": "CC-BY-SA-3.0",
-    "copyright": "Taken from https://github.com/austation/austation/commit/e2a4fefd01e702f48d3d4cc8d6a2686d54d104fa and edited by TheShuEd, folded sprite modified by mubururu_, inhands by mubururu_ (github)",
+    "copyright": "Taken from https://github.com/austation/austation/commit/e2a4fefd01e702f48d3d4cc8d6a2686d54d104fa and edited by TheShuEd",
     "size": {
         "x": 32,
         "y": 32
@@ -29,13 +29,10 @@
             ]
         },
         {
-            "name": "inhand-left",
-            "directions": 4
+            "name": "inhand-left"
         },
         {
-            "name": "inhand-right",
-            "directions": 4
+            "name": "inhand-right"
         }
-
     ]
 }

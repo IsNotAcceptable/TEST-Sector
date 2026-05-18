@@ -1,7 +1,7 @@
 {
     "version": 1,
     "license": "CC-BY-SA-3.0",
-    "copyright": "The sprite base is taken from EricZilla (GitHub) on tgstation from https://github.com/tgstation/tgstation/pull/78761, edited by whatston3; wizard sprites and grayscaled sprites remixed by erhardsteinhauer (github)",
+    "copyright": "The sprite base is taken from EricZilla (GitHub) on tgstation from https://github.com/tgstation/tgstation/pull/78761, edited by whatston3",
     "size": {
         "x": 32,
         "y": 32
@@ -11,40 +11,13 @@
             "name": "closed"
         },
         {
-            "name": "closed-color"
-        },
-        {
-            "name": "closed-color-decal-01"
-        },
-        {
             "name": "closed-black"
-        },
-	{
-            "name": "closed-red"
-        },
-	{
-            "name": "closed-blue"
-        },
-	{
-            "name": "closed-green"
         },
         {
             "name": "closed-mail"
         },
         {
             "name": "closed-pirate"
-        },
-        {
-            "name": "closed-prisoner"
-        },
-	{
-            "name": "closed-lizard"
-        },
-	{
-            "name": "closed-punk"
-        },
-	{
-            "name": "closed-arcadiawear"
         },
         {
             "name": "closed-cash"
@@ -56,49 +29,16 @@
             "name": "closed-paper"
         },
         {
-            "name": "closed-wizard",
-            "delays": [
-                [
-                    0.15625,
-                    0.15625,
-                    0.15625,
-                    0.15625,
-                    0.15625,
-                    0.15625,
-                    0.15625,
-                    0.15625
-                ]
-            ]
-        },
-        {
             "name": "open"
         },
         {
-            "name": "open-color"
-        },
-        {
-            "name": "open-color-decal-01"
-        },
-        {
             "name": "open-black"
-        },
-	{
-            "name": "open-red"
-        },
-	{
-            "name": "open-blue"
-        },
-	{
-            "name": "open-green"
         },
         {
             "name": "open-mail"
         },
         {
             "name": "open-pirate"
-        },
-        {
-            "name": "open-prisoner"
         },
         {
             "name": "open-cash"
@@ -109,44 +49,68 @@
         {
             "name": "open-paper"
         },
-	{
-            "name": "open-lizard"
+        {
+            "name": "closed-arcadiawear"
         },
-	{
-            "name": "open-punk"
+        {
+            "name": "closed-blue"
         },
-	{
+        {
+            "name": "closed-color-decal-01"
+        },
+        {
+            "name": "closed-color"
+        },
+        {
+            "name": "closed-green"
+        },
+        {
+            "name": "closed-lizard"
+        },
+        {
+            "name": "closed-prisoner"
+        },
+        {
+            "name": "closed-punk"
+        },
+        {
+            "name": "closed-red"
+        },
+        {
+            "name": "closed-wizard"
+        },
+        {
             "name": "open-arcadiawear"
         },
         {
-            "name": "open-wizard",
-            "delays": [
-                [
-                    0.15625,
-                    0.15625,
-                    0.15625,
-                    0.15625,
-                    0.15625,
-                    0.15625,
-                    0.15625,
-                    0.15625
-                ]
-            ]
+            "name": "open-blue"
         },
         {
-            "name": "wizard-unshaded",
-            "delays": [
-                [
-                    0.15625,
-                    0.15625,
-                    0.15625,
-                    0.15625,
-                    0.15625,
-                    0.15625,
-                    0.15625,
-                    0.15625
-                ]
-            ]
+            "name": "open-color-decal-01"
+        },
+        {
+            "name": "open-color"
+        },
+        {
+            "name": "open-green"
+        },
+        {
+            "name": "open-lizard"
+        },
+        {
+            "name": "open-prisoner"
+        },
+        {
+            "name": "open-punk"
+        },
+        {
+            "name": "open-red"
+        },
+        {
+            "name": "open-wizard"
+        },
+        {
+            "name": "wizard-unshaded"
         }
     ]
 }

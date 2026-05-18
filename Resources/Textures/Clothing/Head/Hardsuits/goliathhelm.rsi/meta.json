@@ -1,8 +1,7 @@
 {
     "version": 1,
     "license": "CC-BY-SA-3.0",
-    "copyright": "Normal and vox sprites created by https://github.com/Pronana / princesscheeseballs (Discord). Dog states modified from base states by Sparlight (GitHub).",
-
+    "copyright": "All sprites created by https://github.com/Pronana / princesscheeseballs (Discord)",
     "size": {
         "x": 32,
         "y": 32
@@ -45,16 +44,13 @@
             "directions": 4
         },
         {
-            "name": "equipped-head-dog",
-            "directions": 4
+            "name": "equipped-head-dog"
         },
         {
-            "name": "equipped-head-light-dog",
-            "directions": 4
+            "name": "equipped-head-light-dog"
         },
         {
-            "name": "equipped-head-unshaded-dog",
-            "directions": 4
+            "name": "equipped-head-unshaded-dog"
         }
     ]
 }

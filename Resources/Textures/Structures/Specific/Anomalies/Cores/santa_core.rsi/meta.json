@@ -1,33 +1,31 @@
 {
-  "version": 1,
-  "license": "CC0-1.0",
-  "copyright": "Created by Jaraten (github) for ss14 at https://github.com/space-wizards/space-station-14/pull/33889, inhands by TiniestShark (Github)",
-  "size": {
-    "x": 32,
-    "y": 32
-  },
-  "states": [
-    {
-      "name": "core"
+    "version": 1,
+    "license": "CC0-1.0",
+    "copyright": "Created by Jaraten (github) for ss14 at https://github.com/space-wizards/space-station-14/pull/33889",
+    "size": {
+        "x": 32,
+        "y": 32
     },
-    {
-      "name": "inhand-left",
-      "directions": 4
-    },
-    {
-      "name": "inhand-right",
-      "directions": 4
-    },
-    {
-      "name": "pulse",
-      "delays": [
-        [
-          0.2,
-          0.2,
-          0.2,
-          0.2
-        ]
-      ]
-    }
-  ]
+    "states": [
+        {
+            "name": "core"
+        },
+        {
+            "name": "pulse",
+            "delays": [
+                [
+                    0.2,
+                    0.2,
+                    0.2,
+                    0.2
+                ]
+            ]
+        },
+        {
+            "name": "inhand-left"
+        },
+        {
+            "name": "inhand-right"
+        }
+    ]
 }

@@ -1,7 +1,7 @@
 {
     "version": 1,
     "license": "CC-BY-NC-SA-4.0",
-    "copyright": "Sprites made by Stagnation for SS14 New Frontier, inhands by whatston3 (github)",
+    "copyright": "Sprites made by Stagnation for SS14 New Frontier",
     "size": {
         "x": 32,
         "y": 32
@@ -41,12 +41,10 @@
             "name": "mag-10"
         },
         {
-            "name": "inhand-left",
-            "directions": 4
+            "name": "inhand-left"
         },
         {
-            "name": "inhand-right",
-            "directions": 4
+            "name": "inhand-right"
         }
     ]
 }

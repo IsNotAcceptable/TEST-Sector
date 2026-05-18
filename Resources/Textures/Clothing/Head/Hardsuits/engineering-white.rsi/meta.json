@@ -1,7 +1,7 @@
 {
     "version": 1,
     "license": "CC-BY-SA-3.0",
-    "copyright": "Taken from tgstation at commit https://github.com/tgstation/tgstation/commit/4f6190e2895e09116663ef282d3ce1d8b35c032e. Vox states by Flareguy for Space Station 14. Dog states modified from base states by Sparlight (GitHub), equipped-head-cat modified from equipped-head made by Zalindae (Github/Discord)",
+    "copyright": "Taken from tgstation at commit https://github.com/tgstation/tgstation/commit/97ec5ed1a0fc8263df5df5a5afbb653d4684992e & light version made by github:Morb0. Vox states by Flareguy for Space Station 14. hydrakin sprite by Zethine / @synthetic_086 (discord).",
     "size": {
         "x": 32,
         "y": 32
@@ -11,77 +11,85 @@
             "name": "icon"
         },
         {
-            "name": "icon-unshaded"
+            "name": "icon-flash"
         },
         {
-            "name": "icon-flash"
+            "name": "off-equipped-HELMET",
+            "directions": 4
+        },
+        {
+            "name": "on-equipped-HELMET",
+            "directions": 4
+        },
+        {
+            "name": "off-equipped-HELMET-vox",
+            "directions": 4
+        },
+        {
+            "name": "on-equipped-HELMET-vox",
+            "directions": 4
+        },
+        {
+            "name": "off-equipped-HELMET-hydrakin",
+            "directions": 4
+        },
+        {
+            "name": "on-equipped-HELMET-hydrakin",
+            "directions": 4
+        },
+        {
+            "name": "equipped-head-cat"
+        },
+        {
+            "name": "equipped-head-dog"
+        },
+        {
+            "name": "equipped-head-light-cat"
+        },
+        {
+            "name": "equipped-head-light-dog"
+        },
+        {
+            "name": "equipped-head-light-vox"
+        },
+        {
+            "name": "equipped-head-light"
+        },
+        {
+            "name": "equipped-head-unshaded-cat"
+        },
+        {
+            "name": "equipped-head-unshaded-dog"
+        },
+        {
+            "name": "equipped-head-unshaded-vox"
+        },
+        {
+            "name": "equipped-head-unshaded"
+        },
+        {
+            "name": "equipped-head-vox"
+        },
+        {
+            "name": "equipped-head"
+        },
+        {
+            "name": "icon-unshaded"
         },
         {
             "name": "light-overlay"
         },
         {
-            "name": "equipped-head",
-            "directions": 4
+            "name": "off-equipped-HELMET-harpy"
         },
         {
-            "name": "equipped-head-light",
-            "directions": 4
+            "name": "off-equipped-HELMET-vulpkanin"
         },
         {
-            "name": "equipped-head-unshaded",
-            "directions": 4
+            "name": "on-equipped-HELMET-harpy"
         },
         {
-            "name": "equipped-head-vox",
-            "directions": 4
-        },
-        {
-            "name": "equipped-head-light-vox",
-            "directions": 4
-        },
-        {
-            "name": "equipped-head-unshaded-vox",
-            "directions": 4
-        },
-        {
-            "name": "equipped-head-dog",
-            "directions": 4
-        },
-        {
-            "name": "equipped-head-light-dog",
-            "directions": 4
-        },
-        {
-            "name": "equipped-head-unshaded-dog",
-            "directions": 4
-        },
-        {
-            "name": "equipped-head-cat",
-            "directions": 4
-        },
-        {
-            "name": "equipped-head-light-cat",
-            "directions": 4
-        },
-        {
-            "name": "equipped-head-unshaded-cat",
-            "directions": 4
-        },
-        {
-            "name": "on-equipped-HELMET-vulpkanin",
-            "directions": 4
-        },
-        {
-            "name": "off-equipped-HELMET-vulpkanin",
-            "directions": 4
-        },
-        {
-            "name": "on-equipped-HELMET-harpy",
-            "directions": 4
-        },
-        {
-            "name": "off-equipped-HELMET-harpy",
-            "directions": 4
+            "name": "on-equipped-HELMET-vulpkanin"
         }
     ]
 }

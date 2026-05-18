@@ -1,7 +1,7 @@
 {
     "version": 1,
     "license": "CC-BY-SA-3.0",
-    "copyright": "contraband by gentlebutter, animated by whatston3; cargo_market, shuttle_records, solar_screen, station_atm by whatston3; computer_expedition, computer_scrap, scrap_keyboard, scrap_key by erhardsteinhauer",
+    "copyright": "contraband by gentlebutter, animated by whatston3; cargo_market, cargo_sale, shuttle_records, solar_screen, station_atm by whatston3. Factional shipyard states edited from shipyard_security by _starch_ (discord)/kasature90 (github).",
     "size": {
         "x": 32,
         "y": 32
@@ -24,27 +24,11 @@
             "directions": 4
         },
         {
-            "name": "computer_expedition",
-            "directions": 4
-        },
-        {
-            "name": "computer_scrap",
-            "directions": 4
-        },
-        {
             "name": "generic_keyboard",
             "directions": 4
         },
         {
             "name": "generic_keys",
-            "directions": 4
-        },
-        {
-            "name": "scrap_keyboard",
-            "directions": 4
-        },
-        {
-            "name": "scrap_key",
             "directions": 4
         },
         {
@@ -86,6 +70,28 @@
                     0.45,
                     0.45,
                     0.45
+                ]
+            ]
+        },
+        {
+            "name": "cargo_sale",
+            "directions": 4,
+            "delays": [
+                [
+                    0.9,
+                    0.9
+                ],
+                [
+                    0.9,
+                    0.9
+                ],
+                [
+                    0.9,
+                    0.9
+                ],
+                [
+                    0.9,
+                    0.9
                 ]
             ]
         },
@@ -274,36 +280,6 @@
             ]
         },
         {
-            "name": "shipyard_scrap",
-            "directions": 4,
-            "delays": [
-                [
-                    1,
-                    0.3,
-                    1,
-                    0.3
-                ],
-                [
-                    1,
-                    0.3,
-                    1,
-                    0.3
-                ],
-                [
-                    1,
-                    0.3,
-                    1,
-                    0.3
-                ],
-                [
-                    1,
-                    0.3,
-                    1,
-                    0.3
-                ]
-            ]
-        },
-        {
             "name": "shuttle_records",
             "directions": 4,
             "delays": [
@@ -470,6 +446,141 @@
                     0.6
                 ]
             ]
+        },
+        {
+            "name": "shipyard_pdv",
+            "directions": 4,
+            "delays": [
+                [
+                    1,
+                    0.3,
+                    1,
+                    0.3
+                ],
+                [
+                    1,
+                    0.3,
+                    1,
+                    0.3
+                ],
+                [
+                    1,
+                    0.3,
+                    1,
+                    0.3
+                ],
+                [
+                    1,
+                    0.3,
+                    1,
+                    0.3
+                ]
+            ]
+        },
+        {
+            "name": "shipyard_scrapyard",
+            "directions": 4,
+            "delays": [
+                [
+                    1,
+                    0.3,
+                    1,
+                    0.3
+                ],
+                [
+                    1,
+                    0.3,
+                    1,
+                    0.3
+                ],
+                [
+                    1,
+                    0.3,
+                    1,
+                    0.3
+                ],
+                [
+                    1,
+                    0.3,
+                    1,
+                    0.3
+                ]
+            ]
+        },
+        {
+            "name": "shipyard_expedition",
+            "directions": 4,
+            "delays": [
+                [
+                    1,
+                    0.3,
+                    1,
+                    0.3
+                ],
+                [
+                    1,
+                    0.3,
+                    1,
+                    0.3
+                ],
+                [
+                    1,
+                    0.3,
+                    1,
+                    0.3
+                ],
+                [
+                    1,
+                    0.3,
+                    1,
+                    0.3
+                ]
+            ]
+        },
+        {
+            "name": "shipyard_ussp",
+            "directions": 4,
+            "delays": [
+                [
+                    1,
+                    0.3,
+                    1,
+                    0.3
+                ],
+                [
+                    1,
+                    0.3,
+                    1,
+                    0.3
+                ],
+                [
+                    1,
+                    0.3,
+                    1,
+                    0.3
+                ],
+                [
+                    1,
+                    0.3,
+                    1,
+                    0.3
+                ]
+            ]
+        },
+        {
+            "name": "computer_expedition"
+        },
+        {
+            "name": "computer_scrap"
+        },
+        {
+            "name": "scrap_key"
+        },
+        {
+            "name": "scrap_keyboard"
+        },
+        {
+            "name": "shipyard_scrap"
         }
     ]
 }

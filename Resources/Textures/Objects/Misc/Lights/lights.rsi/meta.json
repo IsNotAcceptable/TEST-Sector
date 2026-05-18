@@ -1,55 +1,55 @@
 {
-  "version": 1,
-  "license": "CC-BY-SA-3.0",
-  "copyright": "Taken from tgstation at https://github.com/tgstation/tgstation/commit/e1142f20f5e4661cb6845cfcf2dd69f864d67432, Floodlight inhand sprites by onesch",
-  "size": {
-    "x": 32,
-    "y": 32
-  },
-  "states": [
-    {
-        "name": "bananalamp",
-        "directions": 4
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "Taken from tgstation at https://github.com/tgstation/tgstation/commit/e1142f20f5e4661cb6845cfcf2dd69f864d67432",
+    "size": {
+        "x": 32,
+        "y": 32
     },
-    {
-        "name": "bananalamp_on",
-        "directions": 4
-    },
-    {
-      "name": "floodlight"
-    },
-    {
-      "name": "off-inhand-left",
-      "directions": 4
-    },
-    {
-      "name": "off-inhand-right",
-      "directions": 4
-    },
-    {
-      "name": "floodlight-on"
-    },
-    {
-      "name": "on-inhand-left",
-      "directions": 4
-    },
-    {
-      "name": "on-inhand-right",
-      "directions": 4
-    },
-    {
-      "name": "floodlight_burned"
-    },
-    {
-      "name": "floodlight-broken"
-    },
-    {
-      "name": "floodlight-broken-inhand-left",
-      "directions": 4
-    },
-    {
-      "name": "floodlight-broken-inhand-right",
-      "directions": 4
-    }
-  ]
+    "states": [
+        {
+            "name": "bananalamp",
+            "directions": 4
+        },
+        {
+            "name": "bananalamp_on",
+            "directions": 4
+        },
+        {
+            "name": "floodlight"
+        },
+        {
+            "name": "floodlight_on"
+        },
+        {
+            "name": "floodlight_burned"
+        },
+        {
+            "name": "floodlight_broken"
+        },
+        {
+            "name": "floodlight-broken-inhand-left"
+        },
+        {
+            "name": "floodlight-broken-inhand-right"
+        },
+        {
+            "name": "floodlight-broken"
+        },
+        {
+            "name": "floodlight-on"
+        },
+        {
+            "name": "off-inhand-left"
+        },
+        {
+            "name": "off-inhand-right"
+        },
+        {
+            "name": "on-inhand-left"
+        },
+        {
+            "name": "on-inhand-right"
+        }
+    ]
 }

@@ -4,7 +4,7 @@
         "x": 32,
         "y": 32
     },
-    "copyright": "Taken from tgstation, brigmedic locker is a resprited CMO locker by PuroSlavKing (Github), n2 sprites based on fire and emergency sprites, genpop lockers by EmoGarbage404 (github), sci bio locker is a resprited bio viro locker by Alpha-Two (github), Evac lockers by EmoGarbage404 (GitHub)",
+    "copyright": "Taken from tgstation, brigmedic locker is a resprited CMO locker by PuroSlavKing (Github), n2 sprites based on fire and emergency sprites",
     "license": "CC-BY-SA-3.0",
     "states": [
         {
@@ -72,15 +72,6 @@
         },
         {
             "name": "bio_open"
-        },
-        {
-            "name": "bio_sci"
-        },
-        {
-            "name": "bio_sci_door"
-        },
-        {
-            "name": "bio_sci_open"
         },
         {
             "name": "bio_sec"
@@ -306,9 +297,6 @@
             "name": "eng_weld_door"
         },
         {
-            "name": "eng_evac_door"
-        },
-        {
             "name": "fire"
         },
         {
@@ -340,36 +328,6 @@
         },
         {
             "name": "generic_icon"
-        },
-        {
-            "name": "genpop"
-        },
-        {
-            "name": "genpop_door_1"
-        },
-        {
-            "name": "genpop_door_2"
-        },
-        {
-            "name": "genpop_door_3"
-        },
-        {
-            "name": "genpop_door_4"
-        },
-        {
-            "name": "genpop_door_5"
-        },
-        {
-            "name": "genpop_door_6"
-        },
-        {
-            "name": "genpop_door_7"
-        },
-        {
-            "name": "genpop_door_8"
-        },
-        {
-            "name": "genpop_open"
         },
         {
             "name": "green_door"
@@ -603,6 +561,48 @@
         },
         {
             "name": "representative_door"
+        },
+        {
+            "name": "bio_sci"
+        },
+        {
+            "name": "bio_sci_door"
+        },
+        {
+            "name": "bio_sci_open"
+        },
+        {
+            "name": "eng_evac_door"
+        },
+        {
+            "name": "genpop"
+        },
+        {
+            "name": "genpop_door_1"
+        },
+        {
+            "name": "genpop_door_2"
+        },
+        {
+            "name": "genpop_door_3"
+        },
+        {
+            "name": "genpop_door_4"
+        },
+        {
+            "name": "genpop_door_5"
+        },
+        {
+            "name": "genpop_door_6"
+        },
+        {
+            "name": "genpop_door_7"
+        },
+        {
+            "name": "genpop_door_8"
+        },
+        {
+            "name": "genpop_open"
         }
     ]
 }

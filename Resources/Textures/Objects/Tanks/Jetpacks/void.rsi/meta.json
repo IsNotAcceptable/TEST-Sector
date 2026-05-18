@@ -1,7 +1,7 @@
 {
     "version": 1,
     "license": "CC-BY-SA-3.0",
-    "copyright": "Drawn by Ubaser. Dog states modified from base states by Sparlight (GitHub), Cat states modified from dog and base states for Frontier by Herbtheon (Discord/Github).",
+    "copyright": "Drawn by Ubaser.",
     "size": {
         "x": 32,
         "y": 32
@@ -46,28 +46,22 @@
             "directions": 4
         },
         {
-            "name": "equipped-BACKPACK-dog",
-            "directions": 4
+            "name": "equipped-BACKPACK-dog"
         },
         {
-            "name": "on-equipped-BACKPACK-dog",
-            "directions": 4
+            "name": "equipped-SUITSTORAGE-cat"
         },
         {
-            "name": "equipped-SUITSTORAGE-dog",
-            "directions": 4
+            "name": "equipped-SUITSTORAGE-dog"
         },
         {
-            "name": "on-equipped-SUITSTORAGE-dog",
-            "directions": 4
+            "name": "on-equipped-BACKPACK-dog"
         },
         {
-            "name": "equipped-SUITSTORAGE-cat",
-            "directions": 4
+            "name": "on-equipped-SUITSTORAGE-cat"
         },
         {
-            "name": "on-equipped-SUITSTORAGE-cat",
-            "directions": 4
+            "name": "on-equipped-SUITSTORAGE-dog"
         }
     ]
 }

@@ -1,7 +1,7 @@
 {
     "version": 1,
     "license": "CC-BY-SA-3.0",
-    "copyright": "Taken from tgstation at https://github.com/tgstation/tgstation/commit/cf45322c7ee16f9d7e43d5260daf24ceb77c1b25, limb sprites edited into inhands by mubururu_ (github)",
+    "copyright": "Taken from tgstation at https://github.com/tgstation/tgstation/commit/cf45322c7ee16f9d7e43d5260daf24ceb77c1b25",
     "size": {
         "x": 32,
         "y": 32
@@ -14,48 +14,16 @@
             "name": "borg_r_arm"
         },
         {
-            "name": "borg-arm-inhand-left",
-            "directions": 4
-        },
-        {
-            "name": "borg-arm-inhand-right",
-            "directions": 4
-        },
-        {
             "name": "borg_l_leg"
         },
         {
             "name": "borg_r_leg"
         },
         {
-            "name": "borg-leg-inhand-left",
-            "directions": 4
-        },
-        {
-            "name": "borg-leg-inhand-right",
-            "directions": 4
-        },
-        {
             "name": "borg_chest"
         },
         {
-            "name": "borg-chest-inhand-left",
-            "directions": 4
-        },
-        {
-            "name": "borg-chest-inhand-right",
-            "directions": 4
-        },
-        {
             "name": "borg_head"
-        },
-        {
-            "name": "borg-head-inhand-left",
-            "directions": 4
-        },
-        {
-            "name": "borg-head-inhand-right",
-            "directions": 4
         },
         {
             "name": "robo_suit"
@@ -245,6 +213,30 @@
         },
         {
             "name": "service_r_leg+o"
+        },
+        {
+            "name": "borg-arm-inhand-left"
+        },
+        {
+            "name": "borg-arm-inhand-right"
+        },
+        {
+            "name": "borg-chest-inhand-left"
+        },
+        {
+            "name": "borg-chest-inhand-right"
+        },
+        {
+            "name": "borg-head-inhand-left"
+        },
+        {
+            "name": "borg-head-inhand-right"
+        },
+        {
+            "name": "borg-leg-inhand-left"
+        },
+        {
+            "name": "borg-leg-inhand-right"
         }
     ]
 }

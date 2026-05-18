@@ -1,7 +1,7 @@
 {
     "version": 1,
     "license": "CC-BY-SA-3.0",
-    "copyright": "Taken from tgstation and modified by Swept at https://github.com/tgstation/tgstation/commit/40d75cc340c63582fb66ce15bf75a36115f6bdaa, inhands by mubururu_ (github), cotton cake sprites by DispenserG0inUp, berry delighht sprites by FairlySadPanda (Github)",
+    "copyright": "Taken from tgstation and modified by Swept at https://github.com/tgstation/tgstation/commit/40d75cc340c63582fb66ce15bf75a36115f6bdaa",
     "size": {
         "x": 32,
         "y": 32
@@ -11,67 +11,25 @@
             "name": "alpha"
         },
         {
-            "name": "alpha-inhand-left",
-            "directions": 4
-        },
-        {
-            "name": "alpha-inhand-right",
-            "directions": 4
-        },
-        {
             "name": "alpha-filling"
-        },
-        {
-            "name": "alpha-filling-inhand-left",
-            "directions": 4
-        },
-        {
-            "name": "alpha-filling-inhand-right",
-            "directions": 4
         },
         {
             "name": "alpha-slice"
         },
         {
-            "name": "alpha-slice-inhand-left",
-            "directions": 4
-        },
-        {
-            "name": "alpha-slice-inhand-right",
-            "directions": 4
-        },
-        {
             "name": "alpha-slice-filling"
         },
         {
-            "name": "alpha-slice-filling-inhand-left",
-            "directions": 4
+            "name": "apple"
         },
         {
-            "name": "alpha-slice-filling-inhand-right",
-            "directions": 4
+            "name": "apple-slice"
         },
         {
             "name": "birthday"
         },
         {
-            "name": "birthday-inhand-left",
-            "directions": 4
-        },
-        {
-            "name": "birthday-inhand-right",
-            "directions": 4
-        },
-        {
             "name": "birthday-slice"
-        },
-        {
-            "name": "birthday-slice-inhand-left",
-            "directions": 4
-        },
-        {
-            "name": "birthday-slice-inhand-right",
-            "directions": 4
         },
         {
             "name": "brain"
@@ -95,48 +53,40 @@
             "name": "cheese-slice"
         },
         {
+            "name": "chocolate"
+        },
+        {
+            "name": "chocolate-slice"
+        },
+        {
+            "name": "lemon"
+        },
+        {
+            "name": "lemon-slice"
+        },
+        {
+            "name": "lime"
+        },
+        {
+            "name": "lime-slice"
+        },
+        {
+            "name": "orange"
+        },
+        {
+            "name": "orange-slice"
+        },
+        {
             "name": "plain"
-        },
-        {
-            "name": "plain-inhand-left",
-            "directions": 4
-        },
-        {
-            "name": "plain-inhand-right",
-            "directions": 4
         },
         {
             "name": "plain-slice"
         },
         {
-            "name": "plain-slice-inhand-left",
-            "directions": 4
-        },
-        {
-            "name": "plain-slice-inhand-right",
-            "directions": 4
-        },
-        {
             "name": "clown"
         },
         {
-            "name": "clown-inhand-left",
-            "directions": 4
-        },
-        {
-            "name": "clown-inhand-right",
-            "directions": 4
-        },
-        {
             "name": "clown-slice"
-        },
-        {
-            "name": "clown-slice-inhand-left",
-            "directions": 4
-        },
-        {
-            "name": "clown-slice-inhand-right",
-            "directions": 4
         },
         {
             "name": "plate"
@@ -175,59 +125,31 @@
             "name": "vanilla"
         },
         {
-            "name": "vanilla-inhand-left",
-            "directions": 4
-        },
-        {
-            "name": "vanilla-inhand-right",
-            "directions": 4
-        },
-        {
             "name": "vanilla-slice"
         },
         {
             "name": "trumpet"
         },
         {
-            "name": "trumpet-inhand-left",
-            "directions": 4
-        },
-        {
-            "name": "trumpet-inhand-right",
-            "directions": 4
-        },
-        {
             "name": "trumpet-slice"
         },
         {
-            "name": "trumpet-slice-inhand-left",
-            "directions": 4
+            "name": "suppermatter",
+            "directions": 1,
+            "delays": [
+                [
+                    1.0
+                ]
+            ]
         },
         {
-            "name": "trumpet-slice-inhand-right",
-            "directions": 4
-        },
-        {
-            "name": "suppermatter"
-        },
-        {
-            "name": "suppermatter-inhand-left",
-            "directions": 4
-        },
-        {
-            "name": "suppermatter-inhand-right",
-            "directions": 4
-        },
-        {
-            "name": "suppermatter-shard"
-        },
-        {
-            "name": "suppermatter-shard-inhand-left",
-            "directions": 4
-        },
-        {
-            "name": "suppermatter-shard-inhand-right",
-            "directions": 4
+            "name": "suppermatter-shard",
+            "directions": 1,
+            "delays": [
+                [
+                    1.0
+                ]
+            ]
         },
         {
             "name": "lemoon",
@@ -241,101 +163,131 @@
                     0.15,
                     0.15,
                     0.15
-
-                ]
-            ]
-        },
-        {
-            "name": "lemoon-inhand-left",
-            "directions": 4,
-            "delays": [
-                [
-                    0.20,
-                    0.20,
-                    0.20,
-                    0.20
-                ],
-                [
-                    0.20,
-                    0.20,
-                    0.20,
-                    0.20
-                ],
-                [
-                    0.20,
-                    0.20,
-                    0.20,
-                    0.20
-                ],
-                [
-                    0.20,
-                    0.20,
-                    0.20,
-                    0.20
-                ]
-            ]
-        },
-        {
-            "name": "lemoon-inhand-right",
-            "directions": 4,
-            "delays": [
-                [
-                    0.20,
-                    0.20,
-                    0.20,
-                    0.20
-                ],
-                [
-                    0.20,
-                    0.20,
-                    0.20,
-                    0.20
-                ],
-                [
-                    0.20,
-                    0.20,
-                    0.20,
-                    0.20
-                ],
-                [
-                    0.20,
-                    0.20,
-                    0.20,
-                    0.20
                 ]
             ]
         },
         {
             "name": "lemoon-slice"
-
-        },
-		{
-            "name": "cotton"
         },
         {
-            "name": "cotton-inhand-left",
-            "directions": 4
+            "name": "alpha-filling-inhand-left"
         },
         {
-            "name": "cotton-inhand-right",
-            "directions": 4
+            "name": "alpha-filling-inhand-right"
         },
         {
-            "name": "cotton-slice"
+            "name": "alpha-inhand-left"
         },
         {
-            "name": "cotton-slice-inhand-left",
-            "directions": 4
+            "name": "alpha-inhand-right"
         },
         {
-            "name": "cotton-slice-inhand-right",
-            "directions": 4
+            "name": "alpha-slice-filling-inhand-left"
+        },
+        {
+            "name": "alpha-slice-filling-inhand-right"
+        },
+        {
+            "name": "alpha-slice-inhand-left"
+        },
+        {
+            "name": "alpha-slice-inhand-right"
         },
         {
             "name": "berry_delight"
         },
         {
             "name": "berry_delight_slice"
+        },
+        {
+            "name": "birthday-inhand-left"
+        },
+        {
+            "name": "birthday-inhand-right"
+        },
+        {
+            "name": "birthday-slice-inhand-left"
+        },
+        {
+            "name": "birthday-slice-inhand-right"
+        },
+        {
+            "name": "clown-inhand-left"
+        },
+        {
+            "name": "clown-inhand-right"
+        },
+        {
+            "name": "clown-slice-inhand-left"
+        },
+        {
+            "name": "clown-slice-inhand-right"
+        },
+        {
+            "name": "cotton-inhand-left"
+        },
+        {
+            "name": "cotton-inhand-right"
+        },
+        {
+            "name": "cotton-slice-inhand-left"
+        },
+        {
+            "name": "cotton-slice-inhand-right"
+        },
+        {
+            "name": "cotton-slice"
+        },
+        {
+            "name": "cotton"
+        },
+        {
+            "name": "lemoon-inhand-left"
+        },
+        {
+            "name": "lemoon-inhand-right"
+        },
+        {
+            "name": "plain-inhand-left"
+        },
+        {
+            "name": "plain-inhand-right"
+        },
+        {
+            "name": "plain-slice-inhand-left"
+        },
+        {
+            "name": "plain-slice-inhand-right"
+        },
+        {
+            "name": "suppermatter-inhand-left"
+        },
+        {
+            "name": "suppermatter-inhand-right"
+        },
+        {
+            "name": "suppermatter-shard-inhand-left"
+        },
+        {
+            "name": "suppermatter-shard-inhand-right"
+        },
+        {
+            "name": "trumpet-inhand-left"
+        },
+        {
+            "name": "trumpet-inhand-right"
+        },
+        {
+            "name": "trumpet-slice-inhand-left"
+        },
+        {
+            "name": "trumpet-slice-inhand-right"
+        },
+        {
+            "name": "vanilla-inhand-left"
+        },
+        {
+            "name": "vanilla-inhand-right"
         }
     ]
 }

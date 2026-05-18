@@ -1,7 +1,7 @@
 {
     "version": 1,
     "license": "CC-BY-SA-3.0",
-    "copyright": "Created by EmoGarbage404, inhands by mubururu_ (github)",
+    "copyright": "Created by EmoGarbage404",
     "size": {
         "x": 32,
         "y": 32
@@ -11,55 +11,17 @@
             "name": "icon"
         },
         {
-            "name": "inhand-left",
-            "directions": 4,
-            "delays": [
-                [
-                    0.1,
-                    0.1
-                ],
-                [
-                    0.1,
-                    0.1
-                ],
-                [
-                    0.1,
-                    0.1
-                ],
-                [
-                    0.1,
-                    0.1
-                ]
-            ]
-        },
-        {
-            "name": "inhand-right",
-            "directions": 4,
-            "delays": [
-                [
-                    0.1,
-                    0.1
-                ],
-                [
-                    0.1,
-                    0.1
-                ],
-                [
-                    0.1,
-                    0.1
-                ],
-                [
-                    0.1,
-                    0.1
-                ]
-            ]
-        },
-        {
             "name": "penguin",
             "directions": 4
         },
         {
             "name": "dead"
+        },
+        {
+            "name": "inhand-left"
+        },
+        {
+            "name": "inhand-right"
         }
     ]
 }

@@ -1,7 +1,7 @@
 {
     "version": 1,
-    "license": "CC-BY-SA-3.0",
-    "copyright": "Made by DadNotTheBelt (https://github.com/No-Dad-Not-The-Belt) for SS14/Frontier Station 14.",
+    "license": "CC0-1.0",
+    "copyright": "Original work by TJohnson, -reptilian sprite by Zethine / @synthetic_086 (discord).",
     "size": {
         "x": 32,
         "y": 32
@@ -18,23 +18,11 @@
             "directions": 4
         },
         {
-            "name": "off-equipped-HELMET-vulpkanin",
-            "directions": 4
-        },
-        {
-            "name": "off-equipped-HELMET-reptilian",
-            "directions": 4
-        },
-        {
-            "name": "off-inhand-left",
-            "directions": 4
-        },
-        {
-            "name": "off-inhand-right",
-            "directions": 4
-        },
-        {
             "name": "on-equipped-HELMET",
+            "directions": 4
+        },
+        {
+            "name": "off-equipped-HELMET-vulpkanin",
             "directions": 4
         },
         {
@@ -42,16 +30,24 @@
             "directions": 4
         },
         {
+            "name": "off-equipped-HELMET-reptilian",
+            "directions": 4
+        },
+        {
             "name": "on-equipped-HELMET-reptilian",
             "directions": 4
         },
         {
-            "name": "on-inhand-left",
-            "directions": 4
+            "name": "off-inhand-left"
         },
         {
-            "name": "on-inhand-right",
-            "directions": 4
+            "name": "off-inhand-right"
+        },
+        {
+            "name": "on-inhand-left"
+        },
+        {
+            "name": "on-inhand-right"
         }
     ]
 }
