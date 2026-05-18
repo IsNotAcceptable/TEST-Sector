@@ -13,7 +13,7 @@ ledger-no-expenses = None
 ledger-balance = Balance:
 ledger-no-balance = N/A
 
-ledger-tab-Frontier = Frontier Outpost
+ledger-tab-Frontier = Аванпост Фронтира
 ledger-tab-Nfsd = NFSD
 ledger-tab-Medical = Medical Dispatch
 ledger-tab-Edison = Edison

@@ -11,7 +11,7 @@
 - type: pointOfInterest
   id: Tinnia
   parent: BasePOI
-  name: "Tinnia's Rest"
+  name: "Ресторан Тинни"
   minimumDistance: 1200
   maximumDistance: 2900
   spawnGroup: RestStop
@@ -23,10 +23,12 @@
   - type: SolarPoweredGrid
     trackOnInit: true
     doNotCull: true
+  - type: Tower7G # Exodus-Adminbus
+    range: 256
 
 - type: gameMap
   id: Tinnia
-  mapName: "Tinnia's Rest"
+  mapName: "Ресторан Тинни"
   mapPath: /Maps/_NF/POI/tinnia.yml
   minPlayers: 0
   stations:
@@ -34,4 +36,4 @@
       stationProto: DeadDropFrontierOutpost
       components:
         - type: StationNameSetup
-          mapNameTemplate: "Tinnia's Rest"
+          mapNameTemplate: "Ресторан Тинни"

@@ -11,7 +11,7 @@
 - type: pointOfInterest
   id: Medical
   parent: BasePOI
-  name: 'Medical Dispatch'
+  name: 'Медицинский Центр'
   minimumDistance: 1650
   maximumDistance: 3400
   spawnGroup: Required
@@ -22,10 +22,11 @@
   - type: StationTransit
     routes:
       SpawnPoints: 30
+  - type: Tower7G
 
 - type: gameMap
   id: Medical
-  mapName: 'Medical Dispatch'
+  mapName: 'Медицинский Центр'
   mapPath: /Maps/_NF/POI/medical.yml
   minPlayers: 0
   stations:
@@ -33,7 +34,7 @@
       stationProto: RecordsFrontierOutpost
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'Medical Dispatch'
+          mapNameTemplate: 'Медицинский Центр'
         - type: ExtraStationInformation
           icon: /Textures/_NF/Interface/StationIcons/medic.png
           stationSubtext: 'frontier-lobby-medical-subtext'

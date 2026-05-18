@@ -1,0 +1,14 @@
+guide-entry-orehum-rules = Правила Orehum
+guide-entry-orehum-rule-zero-dont-be-asshole = 0. Не будь мудаком
+guide-entry-orehum-rule-one-punishment-evasion = 1. Избегание наказания
+guide-entry-orehum-rule-two-ahelp = 2. Злоупотребление Ahelp
+guide-entry-orehum-rule-three-elitism = 3. Элитизм
+guide-entry-orehum-rule-four-metagaming = 4. Мета-гейминг и мета-кооп
+guide-entry-orehum-rule-five-ooc-abuse = 5. Злоупотребление OOC, LOOC, эмоциями
+guide-entry-orehum-rule-six-bug-abuse = 6. Злоупотребление багами, сторонним ПО
+guide-entry-orehum-rule-seven-twinks = 7. Мульти-аккаунтинг
+guide-entry-orehum-rule-eight-self-antagonist = 8. Самоантагонизм
+guide-entry-orehum-rule-nine-conflicts = 9. Конфликты
+guide-entry-orehum-rule-ten-memory = 10. Память
+guide-entry-orehum-rule-eleven-erp = 11. ERP
+guide-entry-orehum-rule-twelve-information = 12. Доступная информация
