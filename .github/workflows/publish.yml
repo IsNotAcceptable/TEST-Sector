@@ -19,12 +19,21 @@ jobs:
       if: ${{GITHUB.REF_NAME == 'master' && github.repository == 'space-wizards/space-station-14'}}
       run: exit 1
 
+    - name: Generate GitHub App Token
+        id: app-token
+        uses: actions/create-github-app-token@v1
+        with:
+          app-id: ${{ secrets.APP_ID }}
+          private-key: ${{ secrets.APP_PRIVATE_KEY }}
+
     - name: Install dependencies
       run: sudo apt-get install -y python3-paramiko python3-lxml
 
     - uses: actions/checkout@v4.2.2
       with:
         submodules: 'recursive'
+        token: ${{ steps.app-token.outputs.token }}
+
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v4.1.0
       with:
@@ -51,14 +60,14 @@ jobs:
       run: Tools/publish_multi_request.py
       env:
         PUBLISH_TOKEN: ${{ secrets.PUBLISH_TOKEN }}
-        GITHUB_REPOSITORY: ${{ vars.GITHUB_REPOSITORY }}
+        GITHUB_REPOSITORY: ${{ github.repository }}
 
-    # - name: Publish changelog (Discord)
-    #   continue-on-error: true
-    #   run: Tools/actions_changelogs_since_last_run.py
-    #   env:
-    #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    #     DISCORD_WEBHOOK_URL: ${{ secrets.CHANGELOG_DISCORD_WEBHOOK }}
+     - name: Publish changelog (Discord)
+       continue-on-error: true
+       run: Tools/actions_changelogs_since_last_run.py
+       env:
+         GITHUB_TOKEN: ${{ steps.app-token.outputs.token }}
+         DISCORD_WEBHOOK_URL: ${{ secrets.CHANGELOG_DISCORD_WEBHOOK }}
 
     - name: Publish changelog (RSS)
       continue-on-error: true
