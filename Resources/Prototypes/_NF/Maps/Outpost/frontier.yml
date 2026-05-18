@@ -16,7 +16,7 @@
 #            !type:NanotrasenNameGenerator
 #            prefixCreator: '14'
         - type: ExtraStationInformation
-          iconPath: /Textures/_FP/Logo/icon/icon-256x256.png # used the biggest one, looks better when downscaling than upscaling // Fractal: logo
+          icon: /Textures/_Orehum/Logo/icon/icon-256x256.png # used the biggest one, looks better when downscaling than upscaling // Orehum: logo
           stationSubtext: 'frontier-lobby-frontier-subtext'
           stationDescription: 'frontier-lobby-frontier-description'
           lobbySortOrder: 1

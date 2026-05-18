@@ -454,5 +454,43 @@ namespace Content.IntegrationTests.Tests
 
             await pair.CleanReturnAsync();
         }
+
+        private EntityUid SpawnEntity(
+            IEntityManager entManager,
+            string protoName,
+            MapCoordinates coordinates,
+            ComponentRegistry registry = null)
+        {
+            try
+            {
+                return entManager.SpawnEntity(protoName, coordinates, registry);
+            }
+            catch (Exception e)
+            {
+                // hey look, it tells you specifically what entity now!
+                Assert.Fail($"Failed to spawn entity {protoName}\n{e}");
+            }
+
+            return EntityUid.Invalid;
+        }
+
+        private EntityUid SpawnEntity(
+            IEntityManager entManager,
+            string protoName,
+            EntityCoordinates coordinates,
+            ComponentRegistry registry = null)
+        {
+            try
+            {
+                return entManager.SpawnEntity(protoName, coordinates, registry);
+            }
+            catch (Exception e)
+            {
+                // hey look, it tells you specifically what entity now!
+                Assert.Fail($"Failed to spawn entity {protoName}\n{e}");
+            }
+
+            return EntityUid.Invalid;
+        }
     }
 }

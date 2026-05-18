@@ -9,16 +9,22 @@ jobs:
  publish_changelog:
     runs-on: ubuntu-latest
     steps:
+    - name: Generate GitHub App Token
+        id: app-token
+        uses: actions/create-github-app-token@v1
+        with:
+          app-id: ${{ secrets.APP_ID }}
+          private-key: ${{ secrets.APP_PRIVATE_KEY }}
 
     - name: checkout
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
       with:
-        token: ${{secrets.GITHUB_TOKEN}}
+        token: ${{ steps.app-token.outputs.token }}
         ref: master
 
     - name: Publish changelog
       run: Tools/actions_changelogs_since_last_run.py
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ steps.app-token.outputs.token}}
         DISCORD_WEBHOOK_URL: ${{ secrets.CHANGELOG_DISCORD_WEBHOOK }}
-    continue-on-error: true
+      continue-on-error: true

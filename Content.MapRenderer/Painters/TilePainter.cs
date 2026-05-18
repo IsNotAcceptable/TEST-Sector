@@ -115,6 +115,7 @@ namespace Content.MapRenderer.Painters
                 {
                     var index = i;
                     var tileImage = tileSheet.Clone(o => o.Crop(new Rectangle(tileSize * index, 0, 32, 32)).Flip(FlipMode.Vertical));
+                    tileImage.Mutate(i => i.Flip(FlipMode.Vertical)); // Mono
                     images[path].Add(tileImage);
                 }
             }

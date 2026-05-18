@@ -524,7 +524,7 @@ public sealed partial class StationJobsSystem : EntitySystem
                     stationDisplay = new StationDisplayInformation(
                         stationSubtext: extraStationInformation.StationSubtext,
                         stationDescription: extraStationInformation.StationDescription,
-                        stationIcon: extraStationInformation.IconPath,
+                        stationIcon: extraStationInformation.Icon,
                         lobbySortOrder: extraStationInformation.LobbySortOrder
                     );
                 }

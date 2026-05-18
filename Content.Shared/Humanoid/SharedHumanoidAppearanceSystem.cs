@@ -9,6 +9,7 @@ using Content.Shared.Humanoid.Prototypes;
 using Content.Shared.IdentityManagement;
 using Content.Shared.Inventory;
 using Content.Shared.Preferences;
+using Content.Shared.Sprite;
 using Robust.Shared;
 using Robust.Shared.Configuration;
 using Robust.Shared.Enums;

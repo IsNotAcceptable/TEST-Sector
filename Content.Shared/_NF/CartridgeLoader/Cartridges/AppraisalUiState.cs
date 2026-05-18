@@ -3,7 +3,7 @@ using Robust.Shared.Serialization;
 namespace Content.Shared.CartridgeLoader.Cartridges;
 
 [Serializable, NetSerializable]
-public sealed class AppraisalUiState : BoundUserInterfaceState
+public sealed partial class AppraisalUiState : BoundUserInterfaceState
 {
     /// <summary>
     /// The list of appraised items
@@ -17,7 +17,7 @@ public sealed class AppraisalUiState : BoundUserInterfaceState
 }
 
 [Serializable, NetSerializable, DataRecord]
-public sealed class AppraisedItem
+public sealed partial class AppraisedItem
 {
     public readonly string Name;
     public readonly string AppraisedPrice;

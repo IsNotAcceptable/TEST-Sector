@@ -3,12 +3,14 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text.Json;
+using System.Threading;
 using System.Threading.Tasks;
 using Content.IntegrationTests;
 using Content.MapRenderer.Painters;
 using Content.Server.Maps;
+using Newtonsoft.Json;
 using Robust.Shared.Prototypes;
+using Robust.Shared.Utility;
 using SixLabors.ImageSharp;
 using SixLabors.ImageSharp.Formats.Webp;
 
@@ -20,23 +22,23 @@ namespace Content.MapRenderer
         private static readonly Func<string, string> ChosenMapIdNotIntMessage = id => $"The chosen id is not a valid integer: {id}";
         private static readonly Func<int, string> NoMapFoundWithIdMessage = id => $"No map found with chosen id: {id}";
 
+        private static readonly MapPainter MapPainter = new();
+
         internal static async Task Main(string[] args)
         {
+
             if (!CommandLineArguments.TryParse(args, out var arguments))
                 return;
 
-            var testContext = new ExternalTestContext("Content.MapRenderer", Console.Out);
-
             PoolManager.Startup();
-            if (arguments.Maps.Count == 0)
+            if (arguments.Maps.Count == 0 && arguments.Grids.Count == 0)
             {
                 Console.WriteLine("Didn't specify any maps to paint! Loading the map list...");
 
-                await using var pair = await PoolManager.GetServerClient(testContext: testContext);
+                await using var pair = await PoolManager.GetServerClient();
                 var mapIds = pair.Server
                     .ResolveDependency<IPrototypeManager>()
                     .EnumeratePrototypes<GameMapPrototype>()
-                    .Where(map => !pair.IsTestPrototype(map))
                     .Select(map => map.ID)
                     .ToArray();
 
@@ -102,118 +104,92 @@ namespace Content.MapRenderer
                 Console.WriteLine($"Selected maps: {string.Join(", ", selectedMapPrototypes)}");
             }
 
-            var maps = new List<RenderMap>();
-
-            if (arguments.ArgumentsAreFileNames)
+            if (arguments.ArgumentsAreFileNames || arguments.Grids.Count != 0)
             {
-                Console.WriteLine("Retrieving maps by file names...");
-
-                //
-                // Handle legacy command line processing:
-                // Ideally, people pass file names that are relative to the process working directory.
-                // i.e. regular command-line behavior.
-                //
-                // However, the map renderer was originally written to only handle gameMap prototypes,
-                // so it would actually go through the list of prototypes and match file name arguments
-                // via a *very* coarse check.
-                //
-                // So if we have any input filenames that don't exist... we run the old behavior.
-                // Yes by the way this means a typo means spinning up an entire integration pool pair
-                // before the map renderer can report a proper failure.
-                //
-                // Note that this legacy processing is very important! The map server currently relies on it,
-                // because it wants to work with file names, but we *need* to resolve the input to a prototype
-                // to properly export viewer JSON data.
-                //
-
-                var lookupPrototypeFiles = new List<string>();
-
-                foreach (var map in arguments.Maps)
+                if (arguments.Maps.Count == 0)
                 {
-                    if (File.Exists(map))
-                    {
-                        maps.Add(new RenderMapFile { FileName = map });
-                    }
-                    else
-                    {
-                        lookupPrototypeFiles.Add(map);
-                    }
+                    Console.WriteLine("Rendering grids...");
                 }
-
-                if (lookupPrototypeFiles.Count > 0)
+                else
                 {
-                    Console.Write($"Following map files did not exist on disk directly, searching through prototypes: {string.Join(", ", lookupPrototypeFiles)}");
+                    Console.WriteLine("Retrieving map ids by map file names...");
 
+                    Console.Write("Fetching map prototypes... ");
                     await using var pair = await PoolManager.GetServerClient();
                     var mapPrototypes = pair.Server
                         .ResolveDependency<IPrototypeManager>()
                         .EnumeratePrototypes<GameMapPrototype>()
                         .ToArray();
+                    Console.WriteLine("[Done]");
 
-                    foreach (var toFind in lookupPrototypeFiles)
+                    var ids = new List<string>();
+
+                    foreach (var mapPrototype in mapPrototypes)
                     {
-                        foreach (var mapPrototype in mapPrototypes)
+                        if (arguments.Maps.Contains(mapPrototype.MapPath.Filename))
                         {
-                            if (mapPrototype.MapPath.Filename == toFind)
-                            {
-                                maps.Add(new RenderMapPrototype { Prototype = mapPrototype, });
-                                Console.WriteLine($"Found matching map prototype: {mapPrototype.MapName}");
-                                goto found;
-                            }
+                            ids.Add(mapPrototype.ID);
+                            Console.WriteLine($"Found map: {mapPrototype.MapName}");
                         }
-
-                        await Console.Error.WriteLineAsync($"Found no map prototype for file '{toFind}'!");
-
-                        found: ;
                     }
-                }
-            }
-            else
-            {
-                foreach (var map in arguments.Maps)
-                {
-                    maps.Add(new RenderMapPrototype { Prototype = map });
+
+                    if (ids.Count == 0 && arguments.Grids.Count == 0)
+                    {
+                        await Console.Error.WriteLineAsync("Found no maps for the given file names and no grids given!");
+                        return;
+                    }
+
+                    arguments.Maps = ids;
                 }
             }
 
-            await Run(arguments, maps, testContext);
+            await Run(arguments);
             PoolManager.Shutdown();
         }
 
-        private static async Task Run(
-            CommandLineArguments arguments,
-            List<RenderMap> toRender,
-            ExternalTestContext testContext)
+        private static async Task Run(CommandLineArguments arguments)
         {
-            Console.WriteLine($"Creating images for {toRender.Count} maps");
-
-            var parallaxOutput = arguments.OutputParallax ? new ParallaxOutput(arguments.OutputPath) : null;
+            Console.WriteLine($"Creating images for {arguments.Maps.Count} maps and {arguments.Grids.Count} grids");
 
             var mapNames = new List<string>();
-            foreach (var map in toRender)
+            foreach (var map in arguments.Maps)
+                if (!await TryDraw(arguments, mapNames, map))
+                    continue;
+
+            // Mono
+            foreach (var grid in arguments.Grids)
+                if (!await TryDraw(arguments, mapNames, grid, true))
+                    continue;
+
+            var mapNamesString = $"[{string.Join(',', mapNames.Select(s => $"\"{s}\""))}]";
+            Console.WriteLine($@"::set-output name=map_names::{mapNamesString}");
+            Console.WriteLine($"Processed {arguments.Maps.Count} maps.");
+            Console.WriteLine($"It's now safe to manually exit the process (automatic exit in a few moments...)");
+
+            static async Task<bool> TryDraw(CommandLineArguments arguments, List<string> mapNames, string map, bool isGrid = false)
             {
                 Console.WriteLine($"Painting map {map}");
 
-                await using var painter = new MapPainter(map, testContext);
-                await painter.Initialize();
-                await painter.SetupView(showMarkers: arguments.ShowMarkers);
+                var mapViewerData = new MapViewerData
+                {
+                    Id = map,
+                    Name = Thread.CurrentThread.CurrentCulture.TextInfo.ToTitleCase(map)
+                };
 
-                var mapViewerData = await painter.GenerateMapViewerData(parallaxOutput);
-
-                var mapShort = map.ShortName;
-                var directory = Path.Combine(arguments.OutputPath, mapShort);
-
-                mapNames.Add(mapShort);
+                mapViewerData.ParallaxLayers.Add(LayerGroup.DefaultParallax());
+                var directory = Path.Combine(arguments.OutputPath, isGrid ? new ResPath(map).FilenameWithoutExtension : map);
 
                 var i = 0;
                 try
                 {
-                    await foreach (var renderedGrid in painter.Paint())
+                    var grids = isGrid ? MapPainter.PaintGrid(map) : MapPainter.Paint(map);
+                    await foreach (var renderedGrid in grids)
                     {
                         var grid = renderedGrid.Image;
                         Directory.CreateDirectory(directory);
 
-                        var savePath = $"{directory}{Path.DirectorySeparatorChar}{mapShort}-{i}.{arguments.Format}";
+                        var fileName = Path.GetFileNameWithoutExtension(map);
+                        var savePath = $"{directory}{Path.DirectorySeparatorChar}{fileName}-{i}.{arguments.Format}";
 
                         Console.WriteLine($"Writing grid of size {grid.Width}x{grid.Height} to {savePath}");
 
@@ -238,7 +214,9 @@ namespace Content.MapRenderer
 
                         grid.Dispose();
 
-                        mapViewerData.Grids.Add(new GridLayer(renderedGrid, Path.Combine(mapShort, Path.GetFileName(savePath))));
+                        mapViewerData.Grids.Add(new GridLayer(renderedGrid, Path.Combine(map, Path.GetFileName(savePath))));
+
+                        mapNames.Add(fileName);
                         i++;
                     }
                 }
@@ -246,29 +224,17 @@ namespace Content.MapRenderer
                 {
                     Console.WriteLine($"Painting map {map} failed due to an internal exception:");
                     Console.WriteLine(ex);
-                    continue;
+                    return false;
                 }
 
                 if (arguments.ExportViewerJson)
                 {
-                    var json = JsonSerializer.Serialize(mapViewerData);
-                    await File.WriteAllTextAsync(Path.Combine(directory, "map.json"), json);
+                    var json = JsonConvert.SerializeObject(mapViewerData);
+                    await File.WriteAllTextAsync(Path.Combine(arguments.OutputPath, map, "map.json"), json);
                 }
 
-                try
-                {
-                    await painter.CleanReturnAsync();
-                }
-                catch (Exception e)
-                {
-                    Console.WriteLine($"Exception while shutting down painter: {e}");
-                }
+                return true;
             }
-
-            var mapNamesString = $"[{string.Join(',', mapNames.Select(s => $"\"{s}\""))}]";
-            Console.WriteLine($@"::set-output name=map_names::{mapNamesString}");
-            Console.WriteLine($"Processed {arguments.Maps.Count} maps.");
-            Console.WriteLine($"It's now safe to manually exit the process (automatic exit in a few moments...)");
         }
     }
 }
