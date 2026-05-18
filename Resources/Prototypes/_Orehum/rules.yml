@@ -74,6 +74,12 @@
   ruleEntry: true
 
 - type: guideEntry
+  id: OrehumRule9Conflicts
+  name: guide-entry-orehum-rule-nine-conflicts
+  text: "/ServerInfo/_Orehum/Guidebook/Rules/Rule9_Conflicts.xml"
+  ruleEntry: true
+
+- type: guideEntry
   id: OrehumRule10Memory
   name: guide-entry-orehum-rule-ten-memory
   text: "/ServerInfo/_Orehum/Guidebook/Rules/Rule10_Memory.xml"

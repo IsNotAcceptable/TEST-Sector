@@ -262,9 +262,6 @@
             "name": "cloning"
         },
         {
-            "name": "genpop"
-        },
-        {
             "name": "gravi"
         },
         {
@@ -512,9 +509,6 @@
         },
         {
             "name": "ntmining"
-        },
-        {
-            "name": "detective"
         },
         {
             "name": "genpop"
