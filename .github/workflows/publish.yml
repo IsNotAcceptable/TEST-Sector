@@ -62,12 +62,12 @@ jobs:
           PUBLISH_TOKEN: ${{ secrets.PUBLISH_TOKEN }}
           GITHUB_REPOSITORY: ${{ github.repository }}
   
-       - name: Publish changelog (Discord)
-         continue-on-error: true
-         run: Tools/actions_changelogs_since_last_run.py
-         env:
-           GITHUB_TOKEN: ${{ steps.app-token.outputs.token }}
-           DISCORD_WEBHOOK_URL: ${{ secrets.CHANGELOG_DISCORD_WEBHOOK }}
+      - name: Publish changelog (Discord)
+        continue-on-error: true
+        run: Tools/actions_changelogs_since_last_run.py
+        env:
+          GITHUB_TOKEN: ${{ steps.app-token.outputs.token }}
+          DISCORD_WEBHOOK_URL: ${{ secrets.CHANGELOG_DISCORD_WEBHOOK }}
   
       - name: Publish changelog (RSS)
         continue-on-error: true
