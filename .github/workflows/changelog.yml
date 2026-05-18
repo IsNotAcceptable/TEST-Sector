@@ -48,6 +48,9 @@ jobs:
       - name: Generate Changelog
         env:
           GITHUB_TOKEN: ${{ steps.app-token.outputs.token }}
+          CHANGELOG_DIR: ${{ env.CHANGELOG_DIR }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          PR_NUMBER: ${{ env.PR_NUMBER }}
         run: |
           cd "Tools/_NF/changelog"
           node changelog.js
