@@ -1,0 +1,92 @@
+- type: guideEntry
+  id: OrehumRuleset
+  name: guide-entry-orehum-rules
+  text: "/ServerInfo/_Orehum/Guidebook/Rules/OrehumRuleset.xml"
+  priority: -2
+  ruleEntry: true
+  children:
+  - OrehumRule0DontBeAsshole
+  - OrehumRule1PunishmentEvasion
+  - OrehumRule2Ahelp
+  - OrehumRule3Elitism
+  - OrehumRule4Metagaming
+  - OrehumRule5OOCAbuse
+  - OrehumRule6BugAbuse
+  - OrehumRule7Twinks
+  - OrehumRule8SelfAntagonist
+  - OrehumRule9Conflicts
+  - OrehumRule10Memory
+  - OrehumRule11ERP
+  - OrehumRule12Information
+
+- type: guideEntry
+  id: OrehumRule0DontBeAsshole
+  name: guide-entry-orehum-rule-zero-dont-be-asshole
+  text: "/ServerInfo/_Orehum/Guidebook/Rules/Rule0_DontBeAsshole.xml"
+  ruleEntry: true
+
+- type: guideEntry
+  id: OrehumRule1PunishmentEvasion
+  name: guide-entry-orehum-rule-one-punishment-evasion
+  text: "/ServerInfo/_Orehum/Guidebook/Rules/Rule1_PunishmentEvasion.xml"
+  ruleEntry: true
+
+- type: guideEntry
+  id: OrehumRule2Ahelp
+  name: guide-entry-orehum-rule-two-ahelp
+  text: "/ServerInfo/_Orehum/Guidebook/Rules/Rule2_Ahelp.xml"
+  ruleEntry: true
+
+- type: guideEntry
+  id: OrehumRule3Elitism
+  name: guide-entry-orehum-rule-three-elitism
+  text: "/ServerInfo/_Orehum/Guidebook/Rules/Rule3_Elitism.xml"
+  ruleEntry: true
+
+- type: guideEntry
+  id: OrehumRule4Metagaming
+  name: guide-entry-orehum-rule-four-metagaming
+  text: "/ServerInfo/_Orehum/Guidebook/Rules/Rule4_Metagaming.xml"
+  ruleEntry: true
+
+- type: guideEntry
+  id: OrehumRule5OOCAbuse
+  name: guide-entry-orehum-rule-five-ooc-abuse
+  text: "/ServerInfo/_Orehum/Guidebook/Rules/Rule5_OOCAbuse.xml"
+  ruleEntry: true
+
+- type: guideEntry
+  id: OrehumRule6BugAbuse
+  name: guide-entry-orehum-rule-six-bug-abuse
+  text: "/ServerInfo/_Orehum/Guidebook/Rules/Rule6_BugAbuse.xml"
+  ruleEntry: true
+
+- type: guideEntry
+  id: OrehumRule7Twinks
+  name: guide-entry-orehum-rule-seven-twinks
+  text: "/ServerInfo/_Orehum/Guidebook/Rules/Rule7_Twinks.xml"
+  ruleEntry: true
+
+- type: guideEntry
+  id: OrehumRule8SelfAntagonist
+  name: guide-entry-orehum-rule-eight-self-antagonist
+  text: "/ServerInfo/_Orehum/Guidebook/Rules/Rule8_SelfAntagonist.xml"
+  ruleEntry: true
+
+- type: guideEntry
+  id: OrehumRule10Memory
+  name: guide-entry-orehum-rule-ten-memory
+  text: "/ServerInfo/_Orehum/Guidebook/Rules/Rule10_Memory.xml"
+  ruleEntry: true
+
+- type: guideEntry
+  id: OrehumRule11ERP
+  name: guide-entry-orehum-rule-eleven-erp
+  text: "/ServerInfo/_Orehum/Guidebook/Rules/Rule11_ERP.xml"
+  ruleEntry: true
+
+- type: guideEntry
+  id: OrehumRule12Information
+  name: guide-entry-orehum-rule-twelve-information
+  text: "/ServerInfo/_Orehum/Guidebook/Rules/Rule12_Information.xml"
+  ruleEntry: true
