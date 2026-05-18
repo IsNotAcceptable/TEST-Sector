@@ -16,6 +16,16 @@ using Robust.Shared.Utility;
 
 namespace Content.Shared.Entry
 {
+    public class EntryPoint
+    {
+    public static void Main(string[] args)
+    {
+        // ... другой код инициализации ...
+
+        // Добавьте поддержку русского языка
+        Loc.AddLanguage("ru-RU", "Русский");
+    }
+}
     public sealed class EntryPoint : GameShared
     {
         [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
