@@ -36,7 +36,7 @@
         - type: StationNameSetup
           mapNameTemplate: 'Pirate Cove'
         - type: ExtraStationInformation
-          iconPath: /Textures/_NF/Interface/Pirate/piratelogo.png
+          icon: /Textures/_NF/Interface/Pirate/piratelogo.png
           stationSubtext: 'frontier-lobby-pirate-subtext'
           stationDescription: 'frontier-lobby-pirate-description'
           lobbySortOrder: 6

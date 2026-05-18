@@ -23,7 +23,7 @@ public sealed partial class ReplayMainMenuControl : Control
         LayoutContainer.SetGrowHorizontal(VBox, LayoutContainer.GrowDirection.Begin);
 
         Subtext.FontOverride = resCache.GetFont("/Fonts/NotoSansDisplay/NotoSansDisplay-Bold.ttf", 24);
-        var logoTexture = resCache.GetResource<TextureResource>("/Textures/_FP/Logo/logo.png"); // Fractal: logo
+        var logoTexture = resCache.GetResource<TextureResource>("/Textures/_Orehum/Logo/logo.png"); // Orehum: logo
         Logo.Texture = logoTexture;
 
         LayoutContainer.SetAnchorPreset(InfoContainer, LayoutContainer.LayoutPreset.BottomLeft);
