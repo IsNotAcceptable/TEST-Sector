@@ -119,7 +119,7 @@ def parse_github_pull_request(changelog, stream):
 
 
 def main():
-    default_filename = 'Resources/Changelog/Frontier.yml' # Frontier: Changelog.yml<Frontier.yml
+    default_filename = 'Resources/Changelog/Orehum.yml'
 
     parser = argparse.ArgumentParser(description='Update the changelog manually.')
 

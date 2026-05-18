@@ -5,7 +5,7 @@ on:
     types: [closed]
 
 env:
-  CHANGELOG_DIR: Resources/Changelog/Frontier.yml # Frontier: Changelog.yml<Frontier.yml
+  CHANGELOG_DIR: Resources/Changelog/Orehum.yml
   PR_NUMBER: ${{ github.event.number }}
 
 jobs:

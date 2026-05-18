@@ -1,0 +1,9 @@
+Entries:
+- author: IsNotAcceptable
+  changes:
+  - type: Add
+    message: >-
+      Обновлен RobustToolbox до 271.2.0
+  id: 6684
+  time: '2026-05-18T13:09:43.0000000+00:00'
+  url: https://github.com/Orehum-Project/Orehum-Sector/pull/1
